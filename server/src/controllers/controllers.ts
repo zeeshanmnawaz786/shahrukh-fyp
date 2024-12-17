@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import { userSchema } from "../models/users";
-// import { lawyerFormSchema } from "../models/register";
+import { societyRegSchema } from "../models/societyReg";
 
 // http://localhost:8000/api/register
 const registerUser = (req: any, res: any) => {
@@ -63,39 +63,72 @@ const loginUser = (req: any, res: any) => {
     });
 };
 
-// // http://localhost:8000/api/register
-// const lawyerFormSubmit = (req: any, res: any) => {
-//   const {
-//     firstName,
-//     lastName,
-//     email,
-//     phoneNumber,
-//     cnic,
-//     judgeType,
-//     caseType,
-//     caseDescription,
-//   } = req.body;
+// http://localhost:8000/api/societyRegister
+const societyRegister = (req: any, res: any) => {
+  const { name, email, phone_number, district, institution_name, societies } =
+    req.body;
 
-//   const lawyerData = new lawyerFormSchema({
-//     firstName,
-//     lastName,
-//     email,
-//     phoneNumber,
-//     cnic,
-//     judgeType,
-//     caseType,
-//     caseDescription,
-//   });
+  if (
+    !name ||
+    !email ||
+    !phone_number ||
+    !district ||
+    !institution_name ||
+    !societies
+  ) {
+    return res.status(400).json({
+      message:
+        "'name', 'email', 'phone_number', 'district', 'institution_name' and 'societies' are required",
+    });
+  }
 
-//   lawyerData
-//     .save()
-//     .then((saveData: any) => {
-//       console.log("data submit:", saveData);
-//       res.json({ message: "data submit successfully", data: saveData });
-//     })
-//     .catch((error: any) => {
-//       console.error("Error submit data:", error);
-//       res.status(500).json({ message: "Failed to submit data" });
-//     });
-// };
-export { registerUser, loginUser };
+  if (!Array.isArray(societies) || societies.length === 0) {
+    return res
+      .status(400)
+      .json({ message: "At least one society must be selected" });
+  }
+
+  societyRegSchema
+    .findOne({ email })
+    .then((existingUser) => {
+      if (existingUser) {
+        return res
+          .status(409)
+          .json({ message: "User in society with this email already exists" });
+      }
+
+      const newUser = new societyRegSchema({
+        name,
+        email,
+        phone_number,
+        district,
+        institution_name,
+        societies,
+      });
+
+      newUser
+        .save()
+        .then((savedUser) => {
+          res.status(201).json({
+            message: "User registered in society successfully",
+            userId: savedUser._id,
+            userName: savedUser.name,
+            societies: savedUser.societies,
+          });
+        })
+        .catch((error) => {
+          console.error("Error saving user in society:", error);
+          res
+            .status(500)
+            .json({ message: "Server error while saving user in society" });
+        });
+    })
+    .catch((error) => {
+      console.error("Error finding user in society:", error);
+      res.status(500).json({ message: "Server error" });
+    });
+};
+
+export default registerUser;
+
+export { registerUser, loginUser, societyRegister };

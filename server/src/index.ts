@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import auth from "./routes/auth";
-// import lawyer from "./routes/lawyer";
+import societyRegister from "./routes/societyRegister";
 import { config } from "dotenv";
 import mongoose from "mongoose";
 import express from "express";
@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 app.use("/api", auth);
-// app.use("/api", lawyer);
+app.use("/api", societyRegister);
 
 app.get("/", async (req: Request, res: Response) => {
   res.status(200).json({
