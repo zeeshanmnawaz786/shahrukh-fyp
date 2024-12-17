@@ -37,6 +37,12 @@ const LoginModal = ({ show, handleClose }) => {
         password,
       });
 
+      const token = response.data.token;
+
+      if (token) {
+        localStorage.setItem("authToken", token);
+      }
+
       setShowAlert(true);
       setFormData({ email: "", password: "" });
     } catch (error) {
@@ -52,6 +58,7 @@ const LoginModal = ({ show, handleClose }) => {
   const handleAlertRedirect = () => {
     setShowAlert(false);
     navigate("/");
+    window.location.reload();
     handleClose();
   };
 
