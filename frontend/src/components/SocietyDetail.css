@@ -1,0 +1,90 @@
+/* Society image settings */
+.society-image {
+  width: 100%;
+  height: 70vh;
+  max-width: 600px;
+  /* Prevents overflow */
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  /* No extra padding */
+}
+
+/* Centering and padding adjustments for details */
+.society-details {
+  text-align: center;
+  margin: 20px auto;
+  padding: 0 20px;
+  /* Add some padding for better mobile view */
+  box-sizing: border-box;
+}
+
+/* Flexbox settings for slider */
+.society-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  /* Prevent overflow */
+  overflow: hidden;
+  /* Hide both horizontal and vertical overflow */
+}
+
+/* Slider item settings */
+.slider-item {
+  text-align: center;
+  max-width: 100%;
+  /* Ensure it fits within the parent container */
+}
+
+/* Icon size adjustments */
+.slider-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.register-btn {
+  margin-top: -50px;
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  .register-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+
+/* Media query adjustments for smaller screens */
+@media (max-width: 768px) {
+  .society-slider {
+    padding: 10px;
+    /* Reduce padding on smaller screens */
+  }
+
+  .society-image {
+    height: 50vh;
+    /* Adjust image height */
+  }
+}
+
+@media (max-width: 480px) {
+  .society-details {
+    padding: 0 10px;
+    /* Further reduce padding */
+  }
+
+  .society-slider {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .slider-icon {
+    font-size: 1.5rem;
+    /* Adjust icon size */
+  }
+}

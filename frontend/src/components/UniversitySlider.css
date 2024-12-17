@@ -1,0 +1,40 @@
+.university-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.university-logo {
+  max-width: 150px;
+  /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.university-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .university-logo {
+    max-width: 120px;
+  }
+
+  .university-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .university-logo {
+    max-width: 100px;
+  }
+
+  .university-name {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,8 @@
+// import express from "express";
+// import { lawyerFormSubmit } from "../controllers/controllers";
+
+// let router = express.Router();
+
+// router.post("/lawyerFormSubmit", lawyerFormSubmit);
+
+// export default router;

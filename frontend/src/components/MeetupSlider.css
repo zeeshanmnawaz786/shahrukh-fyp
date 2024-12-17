@@ -1,0 +1,45 @@
+.meetup-container {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.meetup-title {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.meetup-photo-col {
+  margin-bottom: 15px;
+}
+
+.meetup-photo-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.meetup-photo-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.meetup-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.meetup-photo-caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

@@ -1,0 +1,25 @@
+/* src/components/PresidentsWords.css */
+
+#preswords{
+margin-top: -90px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  /* border-radius: 50%; */
+}
+
+.presWord {
+  font-size: 1.2rem;
+}
+
+/* @media (max-width: 767.98px) {
+  .container {
+    text-align: center;
+  }
+
+  .col-md-8 {
+    margin-top: 1.5rem;
+  }
+} */

@@ -1,0 +1,59 @@
+/* src/components/NavButtons.css
+.btn-custom {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .btn-custom {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+#btn {
+  background-color: #EDC533;
+  border: none;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+#btn1 {
+  background-color: #F47E4A;
+  border: none;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#btn2 {
+  background-color: #E23C48;
+  border: none;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#btn3 {
+  background-color: #4B52A3;
+  border: none;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#btn4 {
+  background-color: #9A56A2;
+  border: none;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#btn5 {
+  background-color: #26B36F;
+  border: none;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+} */

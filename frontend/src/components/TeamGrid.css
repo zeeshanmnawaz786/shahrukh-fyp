@@ -1,0 +1,61 @@
+.team-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+.leader-group {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  width: calc(50% - 2rem);
+  /* 2 groups per row */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leader {
+  margin-bottom: 1.5rem;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.team-member {
+  width: 30%;
+  text-align: center;
+}
+
+.leader-image,
+.team-member-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .leader-group {
+    width: 100%;
+    /* Full width on small screens */
+  }
+
+  .team-member {
+    width: 45%;
+    /* Team members adjust to screen size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team-member {
+    width: 100%;
+    /* Team members stack on very small screens */
+  }
+}

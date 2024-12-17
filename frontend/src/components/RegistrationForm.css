@@ -1,0 +1,41 @@
+.form-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  margin: 30px;
+  margin-top: 100px;
+}
+
+.form-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.form-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+  margin-bottom: 15px;
+}
+
+.interest-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.interest-checkboxes label {
+  flex-basis: 30%;
+}

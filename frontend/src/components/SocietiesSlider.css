@@ -1,0 +1,95 @@
+/* Ensure the container doesn't cause overflow */
+#OurSociety {
+  position: relative;
+  top: -140px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.society-slide {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .15);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.society-slide img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.society-slide h3 {
+  margin: 0;
+  text-align: center;
+}
+
+#ourSocieties {
+  font-size: 4rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px white;
+}
+
+#sent {
+  padding: 10px 30px;
+  margin-top: 10px;
+  font-weight: 700;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .society-slide {
+    width: 100%;
+    /* Ensure full width on tablets */
+  }
+
+  #sent {
+    width: 100%;
+    text-align: center;
+  }
+
+  #OurSociety {
+    top: -100px;
+    /* Adjust to reduce the empty space */
+  }
+}
+
+@media (max-width: 480px) {
+  .society-slide {
+    width: 100%;
+    /* Ensure full width on mobile */
+  }
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    /* Remove padding to prevent vertical scroll */
+    margin-bottom: 0;
+    /* Remove margin to prevent vertical scroll */
+  }
+
+  #OurSociety {
+    top: -80px;
+  }
+}

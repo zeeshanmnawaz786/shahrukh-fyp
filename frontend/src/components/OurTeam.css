@@ -1,0 +1,64 @@
+/* Style for the image container with hover effect */
+
+.main-head {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.main-head h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.main-head h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.teamMembers {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+}
