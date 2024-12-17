@@ -64,20 +64,20 @@ const loginUser = (req: any, res: any) => {
 
 // http://localhost:8000/api/societyRegister
 const societyRegister = (req: any, res: any) => {
-  const { name, email, phone_number, district, institution_name, societies } =
+  const { name, email, phoneNumber, district, institution, societies } =
     req.body;
 
   if (
     !name ||
     !email ||
-    !phone_number ||
+    !phoneNumber ||
     !district ||
-    !institution_name ||
+    !institution ||
     !societies
   ) {
     return res.status(400).json({
       message:
-        "'name', 'email', 'phone_number', 'district', 'institution_name' and 'societies' are required",
+        "'name', 'email', 'phoneNumber', 'district', 'institution' and 'societies' are required",
     });
   }
 
@@ -99,9 +99,9 @@ const societyRegister = (req: any, res: any) => {
       const newUser = new societyRegSchema({
         name,
         email,
-        phone_number,
+        phoneNumber,
         district,
-        institution_name,
+        institution,
         societies,
       });
 

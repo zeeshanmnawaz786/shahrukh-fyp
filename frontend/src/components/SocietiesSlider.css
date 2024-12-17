@@ -16,7 +16,7 @@
   font-size: 14px;
   padding: 5px;
   border-radius: 10px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, .15);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
   background-color: white;
   display: flex;
   flex-direction: column;

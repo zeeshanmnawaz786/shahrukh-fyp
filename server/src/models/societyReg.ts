@@ -9,7 +9,7 @@ const SocietyRegSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  phone_number: {
+  phoneNumber: {
     type: String,
     required: true,
   },
@@ -17,7 +17,7 @@ const SocietyRegSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  institution_name: {
+  institution: {
     type: String,
     required: true,
   },
