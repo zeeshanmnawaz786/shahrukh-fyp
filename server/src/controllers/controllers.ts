@@ -4,13 +4,12 @@ import { societyRegSchema } from "../models/societyReg";
 
 // http://localhost:8000/api/register
 const registerUser = (req: any, res: any) => {
-  const { fullName, email, password, confirm_password } = req.body;
+  const { fullName, email, password } = req.body;
 
   const user = new userSchema({
     fullName,
     email,
     password,
-    confirm_password,
   });
 
   user
