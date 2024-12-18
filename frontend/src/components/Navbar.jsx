@@ -4,10 +4,12 @@ import logo from "../images/yap_hero_img.jpg";
 import "./Navbar.css";
 import LoginModal from "./LoginModal";
 import SignUpModal from "./SignUpModal";
+import AdminModal from "./AdminModal"; // Import the AdminModal component
 
 const NavigationBar = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
+  const [showAdmin, setShowAdmin] = useState(false); // State for Admin modal
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -25,6 +27,9 @@ const NavigationBar = () => {
   const handleSignUpClose = () => setShowSignUp(false);
   const handleSignUpShow = () => setShowSignUp(true);
 
+  const handleAdminClose = () => setShowAdmin(false);
+  const handleAdminShow = () => setShowAdmin(true);
+
   const handleLogout = () => {
     localStorage.removeItem("authToken");
     setIsLoggedIn(false);
@@ -37,7 +42,7 @@ const NavigationBar = () => {
           <Navbar.Brand href="#home" className="d-flex align-items-center">
             <img
               src={logo}
-              alt="Youth Ambassador Programme Logo"
+              alt="NETWORK VOLUNTERRING Logo"
               className="navbar-logo"
             />
             <span className="ms-2">NET-VOL</span>
@@ -51,18 +56,20 @@ const NavigationBar = () => {
               <Nav.Link href="#blog">Blog</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
               {isLoggedIn ? (
-                <Nav.Link href="#logout">
-                  <Button
-                    variant="dark"
-                    className="fw-bold"
-                    onClick={handleLogout}
-                  >
-                    Log Out
-                  </Button>
-                </Nav.Link>
+                <>
+                  <Nav.Link>
+                    <Button
+                      variant="dark"
+                      className="fw-bold"
+                      onClick={handleLogout}
+                    >
+                      Log Out
+                    </Button>
+                  </Nav.Link>
+                </>
               ) : (
                 <>
-                  <Nav.Link href="#login">
+                  <Nav.Link>
                     <Button
                       variant="dark"
                       className="fw-bold"
@@ -71,13 +78,22 @@ const NavigationBar = () => {
                       Log In
                     </Button>
                   </Nav.Link>
-                  <Nav.Link href="#signup">
+                  <Nav.Link>
                     <Button
                       variant="dark"
                       className="fw-bold"
                       onClick={handleSignUpShow}
                     >
                       Sign Up
+                    </Button>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Button
+                      variant="dark"
+                      className="fw-bold"
+                      onClick={handleAdminShow}
+                    >
+                      Admin
                     </Button>
                   </Nav.Link>
                 </>
@@ -89,6 +105,7 @@ const NavigationBar = () => {
 
       <LoginModal show={showLogin} handleClose={handleLoginClose} />
       <SignUpModal show={showSignUp} handleClose={handleSignUpClose} />
+      <AdminModal show={showAdmin} handleClose={handleAdminClose} />
     </>
   );
 };

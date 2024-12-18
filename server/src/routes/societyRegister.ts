@@ -1,8 +1,9 @@
 import express from "express";
-import { societyRegister } from "../controllers/controllers";
+import { getAllSocieties, societyRegister } from "../controllers/controllers";
 
 let router = express.Router();
 
 router.post("/societyRegister", societyRegister);
+router.get("/getAllSocieties", getAllSocieties);
 
 export default router;

@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import './RegistrationForm.css';
+import React, { useState } from "react";
+import "./RegistrationForm.css";
 
 const AmbassadorForm = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    fatherName: '',
-    cnic: '',
-    email: '',
-    studentId: '',
-    subjectOfStudy: '',
-    yearOfStudy: '',
-    cellNo1: '',
-    cellNo2: '',
-    instituteName: '',
-    residentialAddress: '',
-    district: '',
+    fullName: "",
+    fatherName: "",
+    cnic: "",
+    email: "",
+    studentId: "",
+    subjectOfStudy: "",
+    yearOfStudy: "",
+    cellNo1: "",
+    cellNo2: "",
+    instituteName: "",
+    residentialAddress: "",
+    district: "",
     profilePicture: null,
     studentIdCard: null,
     fieldOfInterest: [],
@@ -55,7 +55,7 @@ const AmbassadorForm = () => {
 
   return (
     <div className="form-container ">
-      <h2 className="form-title">ACP Youth Ambassador Programme</h2>
+      <h2 className="form-title">ACP NETWORK VOLUNTERRING</h2>
       <p className="form-subtitle">
         Access to ACP Facilities | Collaborations | Volunteer & Internship
         Initiatives | Performances In International Festivals | Networking
@@ -239,7 +239,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="Theatre"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 Theatre
               </label>
               <label>
@@ -248,7 +248,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="Music"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 Music
               </label>
               <label>
@@ -257,7 +257,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="Dance"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 Dance
               </label>
               <label>
@@ -266,7 +266,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="Fine Arts"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 Fine Arts
               </label>
               <label>
@@ -275,7 +275,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="Textile Design"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 Textile Design
               </label>
               <label>
@@ -284,7 +284,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="Graphic Design"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 Graphic Design
               </label>
               <label>
@@ -293,7 +293,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="Photography"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 Photography
               </label>
               <label>
@@ -302,7 +302,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="Videography"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 Videography
               </label>
               <label>
@@ -311,7 +311,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="PR"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 PR
               </label>
               <label>
@@ -320,7 +320,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="Community Welfare"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 Community Welfare
               </label>
               <label>
@@ -329,7 +329,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="Production"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 Production
               </label>
               <label>
@@ -338,7 +338,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="Direction"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 Direction
               </label>
               <label>
@@ -347,7 +347,7 @@ const AmbassadorForm = () => {
                   name="fieldOfInterest"
                   value="Cinematography"
                   onChange={handleCheckboxChange}
-                />{' '}
+                />{" "}
                 Cinematography
               </label>
             </div>

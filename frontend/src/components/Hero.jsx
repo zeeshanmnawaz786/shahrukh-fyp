@@ -1,21 +1,20 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import "./Hero.css";
 
-// Import the video from the src folder
 import heroVideo from "../videos/Hero vid.mp4";
 
 const Hero = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleRegisterClick = () => {
-    navigate("/register");
-  };
+  // const handleRegisterClick = () => {
+  //   navigate("/register");
+  // };
 
-  const handleTeamClick = () => {
-    navigate("/our-team");
-  };
+  // const handleTeamClick = () => {
+  //   navigate("/our-team");
+  // };
 
   return (
     <div className="hero-section">
@@ -25,7 +24,7 @@ const Hero = () => {
         Your browser does not support the video tag.
       </video>
       <Container className="hero-content">
-        <h1 className="yap-heading">YOUTH AMBASSADOR PROGRAMME</h1>
+        <h1 className="yap-heading">NETWORK VOLUNTERRING</h1>
         <h4 className="yap-quote-heading">YOUTH IS THE ONLY WAY FORWARD</h4>
         <p className="yap-para">
           Join the ACP Ambassador Programme at the Arts Council of Pakistan,
